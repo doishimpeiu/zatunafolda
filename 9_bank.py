@@ -1,4 +1,7 @@
 # メモリを9バンク用意する
+from re import X
+
+
 mem1 = []
 mem2 = []
 mem3 = []
@@ -23,9 +26,9 @@ mem9 = [1832, 1833, 1834, 1835]
 # ↑の4語のリストに228を足すのを4回行って16語にする
 def load(mem):
   for n in range(3):
-    for i in range(len(mem)):
-      # print(mem[i] + 228)
-      mem.append(mem[i] + 228)
+    for i in range(4):
+      # print(mem[i] + (228 * (n + 1)))
+      mem.append(mem[i] + (228 * (n + 1)))
 
 # 次の16語を読み出す
 def add(mem):
@@ -73,7 +76,7 @@ ld()
 
 # mem1〜9の次の16語を読み出す動作をm回行う
 def step():
-  for m in range(1):
+  for m in range(18):
     add(mem1)
     add(mem2)
     add(mem3)
@@ -87,5 +90,5 @@ def step():
 plot()
 step()
 plot()
-
+print(len(mem1))
 
