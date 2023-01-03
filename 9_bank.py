@@ -1,6 +1,4 @@
 # メモリを9バンク用意する
-from re import X
-
 
 mem1 = []
 mem2 = []
@@ -22,6 +20,30 @@ mem6 = [920, 921, 922, 923]
 mem7 = [1824, 1825, 1826, 1827]
 mem8 = [1828, 1829, 1830, 1831]
 mem9 = [1832, 1833, 1834, 1835]
+
+head = 0
+def head_count(head):
+  head = 2520
+  # print(head)
+  return head
+
+def head_add(head, mem):
+  # print("in")
+  for i in range(len(mem)):
+    mem[i] = mem[i] + head
+  # print("mem")
+  # print(mem)
+
+def head_add_all(head):
+  head_add(head, mem1)
+  head_add(head, mem2)
+  head_add(head, mem3)
+  head_add(head, mem4)
+  head_add(head, mem5)
+  head_add(head, mem6)
+  head_add(head, mem7)
+  head_add(head, mem8)
+  head_add(head, mem9)
 
 # ↑の4語のリストに228を足すのを4回行って16語にする
 def load(mem):
@@ -76,7 +98,7 @@ ld()
 
 # mem1〜9の次の16語を読み出す動作をm回行う
 def step():
-  for m in range(18):
+  for m in range(1):
     add(mem1)
     add(mem2)
     add(mem3)
@@ -87,8 +109,68 @@ def step():
     add(mem8)
     add(mem9)
   # plot()
-plot()
-step()
-plot()
-print(len(mem1))
+# plot()
+# step()
+# plot()
+# print(len(mem1))
 
+def write():
+  print(mem1[0], mem1[1], mem1[2], mem1[3], end=" ")
+  print(mem2[0], mem2[1], mem2[2], mem2[3], end=" ")
+  print(mem3[0], mem3[1], mem3[2], mem3[3])
+  print(mem1[4], mem1[5], mem1[6], mem1[7], end=" ")
+  print(mem2[4], mem2[5], mem2[6], mem2[7], end=" ")
+  print(mem3[4], mem3[5], mem3[6], mem3[7])
+  print(mem1[8], mem1[9], mem1[10], mem1[11], end=" ")
+  print(mem2[8], mem2[9], mem2[10], mem2[11], end=" ")
+  print(mem3[8], mem3[9], mem3[10], mem3[11])
+  print(mem1[12], mem1[13], mem1[14], mem1[15], end=" ")
+  print(mem2[12], mem2[13], mem2[14], mem2[15], end=" ")
+  print(mem3[12], mem3[13], mem3[14], mem3[15])
+  
+  print(mem4[0], mem4[1], mem4[2], mem4[3], end=" ")
+  print(mem5[0], mem5[1], mem5[2], mem5[3], end=" ")
+  print(mem6[0], mem6[1], mem6[2], mem6[3])
+  print(mem4[4], mem4[5], mem4[6], mem4[7], end=" ")
+  print(mem5[4], mem5[5], mem5[6], mem5[7], end=" ")
+  print(mem6[4], mem6[5], mem6[6], mem6[7])
+  print(mem4[8], mem4[9], mem4[10], mem4[11], end=" ")
+  print(mem5[8], mem5[9], mem5[10], mem5[11], end=" ")
+  print(mem6[8], mem6[9], mem6[10], mem6[11])
+  print(mem4[12], mem4[13], mem4[14], mem4[15], end=" ")
+  print(mem5[12], mem5[13], mem5[14], mem5[15], end=" ")
+  print(mem6[12], mem6[13], mem6[14], mem6[15])
+
+  print(mem7[0], mem7[1], mem7[2], mem7[3], end=" ")
+  print(mem8[0], mem8[1], mem8[2], mem8[3], end=" ")
+  print(mem9[0], mem9[1], mem9[2], mem9[3])
+  print(mem7[4], mem7[5], mem7[6], mem7[7], end=" ")
+  print(mem8[4], mem8[5], mem8[6], mem8[7], end=" ")
+  print(mem9[4], mem9[5], mem9[6], mem9[7])
+  print(mem7[8], mem7[9], mem7[10], mem7[11], end=" ")
+  print(mem8[8], mem8[9], mem8[10], mem8[11], end=" ")
+  print(mem9[8], mem9[9], mem9[10], mem9[11])
+  print(mem7[12], mem7[13], mem7[14], mem7[15], end=" ")
+  print(mem8[12], mem8[13], mem8[14], mem8[15], end=" ")
+  print(mem9[12], mem9[13], mem9[14], mem9[15])
+
+for i in range(18):
+  write() 
+  step()
+  print("")
+write()
+print("")
+
+
+for m in range(18):
+  print(f"{m}jk")
+  # plot()
+  head = head_count(head)
+  # print(head)
+  head_add_all(head)
+  for i in range(18):
+    write() 
+    step()
+    print("")
+  write()
+  print("")
