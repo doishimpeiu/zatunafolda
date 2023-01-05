@@ -1,14 +1,24 @@
-# メモリを9バンク用意する
+import copy
 
-mem0 = []
-mem1 = []
-mem2 = []
-mem3 = []
-mem4 = []
-mem5 = []
-mem6 = []
-mem7 = []
-mem8 = []
+# メモリを9バンク用意する
+# mem0 = []
+# mem1 = []
+# mem2 = []
+# mem3 = []
+# mem4 = []
+# mem5 = []
+# mem6 = []
+# mem7 = []
+# mem8 = []
+blk0 = []
+blk1 = []
+blk2 = []
+blk3 = []
+blk4 = []
+blk5 = []
+blk6 = []
+blk7 = []
+blk8 = []
 
 # 各バンクは同時に16語読み出せる
 mem0 = [0, 1, 2, 3]
@@ -154,6 +164,27 @@ def write():
   print(mem7[12], mem7[13], mem7[14], mem7[15], end=" ")
   print(mem8[12], mem8[13], mem8[14], mem8[15])
 
+  cp0 = copy.deepcopy(mem0)
+  blk0.append(cp0)
+  cp1 = copy.deepcopy(mem1)
+  blk1.append(cp1)
+  cp2 = copy.deepcopy(mem2)
+  blk2.append(cp2)
+  cp3 = copy.deepcopy(mem3)
+  blk3.append(cp3)
+  cp4 = copy.deepcopy(mem4)
+  blk4.append(cp4)
+  cp5 = copy.deepcopy(mem5)
+  blk5.append(cp5)
+  cp6 = copy.deepcopy(mem6)
+  blk6.append(cp6)
+  cp7 = copy.deepcopy(mem7)
+  blk7.append(cp7)
+  cp8 = copy.deepcopy(mem8)
+  blk8.append(cp8)
+  # print(blk0)
+  # input()
+
 for i in range(18):
   write() 
   step()
@@ -174,3 +205,21 @@ for m in range(18):
     print("")
   write()
   print("")
+
+# print(blk0)
+# print(blk1)
+# print(blk2)
+# print(blk3)
+# print(blk4)
+# print(blk5)
+# print(blk6)
+# print(blk7)
+# print(blk8)
+
+########################
+# ここから本番
+########################
+# 時刻で動作を決めるか(t%3=0の時blk0を出す)か
+# メモリ主体(進む止まる止まる)の動作か
+
+#今回はメモリ主体で考える
