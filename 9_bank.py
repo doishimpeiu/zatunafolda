@@ -226,23 +226,23 @@ for m in range(18):
 t = 0
 c = 0
 print(f"t:{t}")
-print(blk0[0])
-print(blk1[0])
-print(blk2[0])
-print(blk3[0])
-print(blk4[0])
-print(blk5[0])
-print(blk6[0])
-print(blk7[0])
-print(blk8[0])
+print(blk0[c])
+print(blk1[c])
+print(blk2[c])
+print(blk3[c])
+print(blk4[c])
+print(blk5[c])
+print(blk6[c])
+print(blk7[c])
+print(blk8[c])
 
 # for t in range(1, 55):
 # for t in range(1, 56):
 # for t in range(1, 57):
 for t in range(1, 55):
   print(f"t:{t}")
-  if t == 55 or t == 56:
-    continue
+  # if t == 55 or t == 56:
+  #   continue
   if t % 3 == 1:
     print(blk1[c])
     print(blk2[c])
@@ -275,12 +275,268 @@ for t in range(1, 55):
     print(blk7[c])
     print(blk8[c])
 
-print(blk3[0])
-print(blk4[0])
-print(blk5[0])
-print(blk6[0])
-print(blk7[0])
-print(blk8[0])
-print(blk0[0])
-print(blk1[0])
-print(blk2[0])
+c = 0
+# print(f"c:{c}")
+# print("")
+t = t + 1
+print(f"t:{t}") #t:55
+print("チェック1")
+print(blk3[c])
+print(blk4[c])
+print(blk5[c])
+print(blk6[c])
+print(blk7[c])
+print(blk8[c])
+print(blk0[19])
+print(blk1[19])
+print(blk2[19])
+
+for t in range(1, 55):
+  print(f"t:{t}")
+  print("チェック2")
+  if t % 3 == 1:
+    print(blk4[c])
+    print(blk5[c])
+    print(blk3[c+1])
+    print(blk7[c])
+    print(blk8[c])
+    print(blk6[c+1])
+    print(blk1[19+c])
+    print(blk2[19+c])
+    print(blk0[19+c+1])
+  if t % 3 == 2:
+    print(blk5[c])
+    print(blk3[c+1])
+    print(blk4[c+1])
+    print(blk8[c])
+    print(blk6[c+1])
+    print(blk7[c+1])
+    print(blk2[19+c])
+    print(blk0[19+c+1])
+    print(blk1[19+c+1])
+  if t % 3 == 0:
+    c = c + 1
+    print(blk3[c])
+    print(blk4[c])
+    print(blk5[c])
+    print(blk6[c])
+    print(blk7[c])
+    print(blk8[c])
+    print(blk0[19+c])
+    print(blk1[19+c])
+    print(blk2[19+c])
+
+c = 0
+print(f"c:{c}")
+print("チェック3")
+# print("")
+t = t + 1
+print(f"t:{t}") 
+print(blk6[c])
+print(blk7[c])
+print(blk8[c])
+print(blk0[19])
+print(blk1[19])
+print(blk2[19])
+print(blk3[19])
+print(blk4[19])
+print(blk5[19])
+
+for t in range(1, 55):
+  print(f"t:{t}")
+  print("チェック4")
+  if t % 3 == 1:
+    print(blk7[c])
+    print(blk8[c])
+    print(blk6[c+1])
+    print(blk1[19+c])
+    print(blk2[19+c])
+    print(blk0[19+c+1])
+    print(blk4[19+c])
+    print(blk5[19+c])
+    print(blk3[19+c+1])
+  if t % 3 == 2:
+    print(blk8[c])
+    print(blk6[c+1])
+    print(blk7[c+1])
+    print(blk2[19+c])
+    print(blk0[19+c+1])
+    print(blk1[19+c+1])
+    print(blk5[19+c])
+    print(blk3[19+c+1])
+    print(blk4[19+c+1])
+  if t % 3 == 0:
+    c = c + 1
+    print(blk6[c])
+    print(blk7[c])
+    print(blk8[c])
+    print(blk0[19+c])
+    print(blk1[19+c])
+    print(blk2[19+c])
+    print(blk3[19+c])
+    print(blk4[19+c])
+    print(blk5[19+c])
+  
+c = 19
+for c in range(19, 39, 20):
+  print(f"c:{c}")
+  input()
+  # print("")
+  t = t + 1
+  print(f"t:{t}") 
+  print("チェック5")
+  print(blk0[c])
+  print(blk1[c])
+  print(blk2[c])
+  print(blk3[c])
+  print(blk4[c])
+  print(blk5[c])
+  print(blk6[c])
+  print(blk7[c])
+  print(blk8[c])
+
+  for t in range(1, 55):
+    print(f"t:{t}")
+    print("チェック6")
+    # if t == 55 or t == 56:
+    #   continue
+    if t % 3 == 1:
+      print(blk1[c])
+      print(blk2[c])
+      print(blk0[c+1])
+      print(blk4[c])
+      print(blk5[c])
+      print(blk3[c+1])
+      print(blk7[c])
+      print(blk8[c])
+      print(blk6[c+1])
+    if t % 3 == 2:
+      print(blk2[c])
+      print(blk0[c+1])
+      print(blk1[c+1])
+      print(blk5[c])
+      print(blk3[c+1])
+      print(blk4[c+1])
+      print(blk8[c])
+      print(blk6[c+1])
+      print(blk7[c+1])
+    if t % 3 == 0:
+      c = c + 1
+      print(blk0[c])
+      print(blk1[c])
+      print(blk2[c])
+      print(blk3[c])
+      print(blk4[c])
+      print(blk5[c])
+      print(blk6[c])
+      print(blk7[c])
+      print(blk8[c])
+
+  # print("")
+  t = t + 1
+  print(f"t:{t}") 
+  print("チェック7")
+  print("3,4,5,6,7,8,0,1,2")
+  print(f"c:{c}")
+  print(blk3[c])
+  print(blk4[c])
+  print(blk5[c])
+  print(blk6[c])
+  print(blk7[c])
+  print(blk8[c])
+  print(blk0[c+19])
+  print(blk1[c+19])
+  print(blk2[c+19])
+
+  for t in range(1, 55):
+    print(f"t:{t}")
+    print("チェック8")
+    # if t == 55 or t == 56:
+    #   continue
+    if t % 3 == 1:
+      print(blk4[c])
+      print(blk5[c])
+      print(blk3[c+1])
+      print(blk7[c])
+      print(blk8[c])
+      print(blk6[c+1])
+      print(blk1[c])
+      print(blk2[c])
+      print(blk0[c+1])
+    if t % 3 == 2:
+      print(blk5[c])
+      print(blk3[c+1])
+      print(blk4[c+1])
+      print(blk8[c])
+      print(blk6[c+1])
+      print(blk7[c+1])
+      print(blk2[c])
+      print(blk0[c+1])
+      print(blk1[c+1])
+    if t % 3 == 0:
+      c = c + 1
+      print(blk3[c])
+      print(blk4[c])
+      print(blk5[c])
+      print(blk6[c])
+      print(blk7[c])
+      print(blk8[c])
+      print(blk0[c])
+      print(blk1[c])
+      print(blk2[c])
+
+  t = t + 1
+  print(f"t:{t}") 
+  print("チェック9")
+  print("6,7,8,0,1,2,3,4,5")
+  print(f"c:{c}")
+  print(blk6[c])
+  print(blk7[c])
+  print(blk8[c])
+  print(blk0[c+19])
+  print(blk1[c+19])
+  print(blk2[c+19])
+  print(blk3[c+19])
+  print(blk4[c+19])
+  print(blk5[c+19])
+
+  for t in range(1, 55):
+    print(f"t:{t}")
+    print("チェック10")
+    # if t == 55 or t == 56:
+    #   continue
+    if t % 3 == 1:
+      print(blk7[c])
+      print(blk8[c])
+      print(blk6[c+1])
+      print(blk1[c])
+      print(blk2[c])
+      print(blk0[c+1])
+      print(blk4[c])
+      print(blk5[c])
+      print(blk3[c+1])
+    if t % 3 == 2:
+      print(blk8[c])
+      print(blk6[c+1])
+      print(blk7[c+1])
+      print(blk2[c])
+      print(blk0[c+1])
+      print(blk1[c+1])
+      print(blk5[c])
+      print(blk3[c+1])
+      print(blk4[c+1])
+    if t % 3 == 0:
+      c = c + 1
+      print(blk6[c])
+      print(blk7[c])
+      print(blk8[c])
+      print(blk0[c])
+      print(blk1[c])
+      print(blk2[c])
+      print(blk3[c])
+      print(blk4[c])
+      print(blk5[c])
+
+  print(blk3[19])
+  print(blk4[19])
+  print(blk5[19])
