@@ -206,7 +206,8 @@ for m in range(18):
   write()
   # print("")
 
-# print(blk0[0])
+print(blk0[0])
+input()
 # print(blk1)
 # print(blk2)
 # print(blk3)
@@ -222,187 +223,44 @@ for m in range(18):
 # 時刻で動作を決めるか(t%3=0の時blk0を出す)か
 # メモリ主体(進む止まる止まる)の動作か
 
-#時刻で動作を決める
-t = 0
-c = 0
-print(f"t:{t}")
-print(blk0[c])
-print(blk1[c])
-print(blk2[c])
-print(blk3[c])
-print(blk4[c])
-print(blk5[c])
-print(blk6[c])
-print(blk7[c])
-print(blk8[c])
-
-# for t in range(1, 55):
-# for t in range(1, 56):
-# for t in range(1, 57):
-for t in range(1, 55):
-  print(f"t:{t}")
-  # if t == 55 or t == 56:
-  #   continue
-  if t % 3 == 1:
-    print(blk1[c])
-    print(blk2[c])
-    print(blk0[c+1])
-    print(blk4[c])
-    print(blk5[c])
-    print(blk3[c+1])
-    print(blk7[c])
-    print(blk8[c])
-    print(blk6[c+1])
-  if t % 3 == 2:
-    print(blk2[c])
-    print(blk0[c+1])
-    print(blk1[c+1])
-    print(blk5[c])
-    print(blk3[c+1])
-    print(blk4[c+1])
-    print(blk8[c])
-    print(blk6[c+1])
-    print(blk7[c+1])
-  if t % 3 == 0:
-    c = c + 1
-    print(blk0[c])
-    print(blk1[c])
-    print(blk2[c])
-    print(blk3[c])
-    print(blk4[c])
-    print(blk5[c])
-    print(blk6[c])
-    print(blk7[c])
-    print(blk8[c])
-
-c = 0
-# print(f"c:{c}")
-# print("")
-t = t + 1
-print(f"t:{t}") #t:55
-print("チェック1")
-print(blk3[c])
-print(blk4[c])
-print(blk5[c])
-print(blk6[c])
-print(blk7[c])
-print(blk8[c])
-print(blk0[19])
-print(blk1[19])
-print(blk2[19])
-
-for t in range(1, 55):
-  print(f"t:{t}")
-  print("チェック2")
-  if t % 3 == 1:
-    print(blk4[c])
-    print(blk5[c])
-    print(blk3[c+1])
-    print(blk7[c])
-    print(blk8[c])
-    print(blk6[c+1])
-    print(blk1[19+c])
-    print(blk2[19+c])
-    print(blk0[19+c+1])
-  if t % 3 == 2:
-    print(blk5[c])
-    print(blk3[c+1])
-    print(blk4[c+1])
-    print(blk8[c])
-    print(blk6[c+1])
-    print(blk7[c+1])
-    print(blk2[19+c])
-    print(blk0[19+c+1])
-    print(blk1[19+c+1])
-  if t % 3 == 0:
-    c = c + 1
-    print(blk3[c])
-    print(blk4[c])
-    print(blk5[c])
-    print(blk6[c])
-    print(blk7[c])
-    print(blk8[c])
-    print(blk0[19+c])
-    print(blk1[19+c])
-    print(blk2[19+c])
-
-c = 0
-print(f"c:{c}")
-print("チェック3")
-# print("")
-t = t + 1
-print(f"t:{t}") 
-print(blk6[c])
-print(blk7[c])
-print(blk8[c])
-print(blk0[19])
-print(blk1[19])
-print(blk2[19])
-print(blk3[19])
-print(blk4[19])
-print(blk5[19])
-
-for t in range(1, 55):
-  print(f"t:{t}")
-  print("チェック4")
-  if t % 3 == 1:
-    print(blk7[c])
-    print(blk8[c])
-    print(blk6[c+1])
-    print(blk1[19+c])
-    print(blk2[19+c])
-    print(blk0[19+c+1])
-    print(blk4[19+c])
-    print(blk5[19+c])
-    print(blk3[19+c+1])
-  if t % 3 == 2:
-    print(blk8[c])
-    print(blk6[c+1])
-    print(blk7[c+1])
-    print(blk2[19+c])
-    print(blk0[19+c+1])
-    print(blk1[19+c+1])
-    print(blk5[19+c])
-    print(blk3[19+c+1])
-    print(blk4[19+c+1])
-  if t % 3 == 0:
-    c = c + 1
-    print(blk6[c])
-    print(blk7[c])
-    print(blk8[c])
-    print(blk0[19+c])
-    print(blk1[19+c])
-    print(blk2[19+c])
-    print(blk3[19+c])
-    print(blk4[19+c])
-    print(blk5[19+c])
-  
 #################################################
 # c = 19
 l = 0 #0,1,2
 m = 0 #3,4,5
 n = 0 #6,7,8
-for o in range(0, 172, 19):
+clk = 0
+for o in range(0, 362, 19):
+  l = 0 #0,1,2
+  m = 0 #3,4,5
+  n = 0 #6,7,8
   c = o
   print(f"c:{c}")
+  print(f"o:{o}")
+  # o = o + 1
+  # print(f"c:{c}")
+  # print(f"o:{o}")
+
   input()
   # print("")
+  # t = 0もfor文の中に入れれるのではないか
   t = 0
   print(f"t:{t}") 
   print("チェック5")
-  print(blk0[c+l])
-  print(blk1[c+l])
-  print(blk2[c+l])
-  print(blk3[c+m])
-  print(blk4[c+m])
-  print(blk5[c+m])
-  print(blk6[c+n])
-  print(blk7[c+n])
-  print(blk8[c+n])
+  print(blk0[c])
+  print(blk1[c])
+  print(blk2[c])
+  print(blk3[c])
+  print(blk4[c])
+  print(blk5[c])
+  print(blk6[c])
+  print(blk7[c])
+  print(blk8[c])
+  clk = clk + 1
 
   for t in range(1, 55):
     print(f"t:{t}")
     print("チェック6")
+    clk = clk + 1
     # if t == 55 or t == 56:
     #   continue
     if t % 3 == 1:
@@ -438,7 +296,7 @@ for o in range(0, 172, 19):
       print(blk8[c+n])
   l = l + 19
   print(f"l:{l}")
-  if(l == 190):
+  if(o == 342 and l == 19):
     break
 
   # print("")
@@ -457,10 +315,12 @@ for o in range(0, 172, 19):
   print(blk0[c+l])
   print(blk1[c+l])
   print(blk2[c+l])
+  clk = clk + 1
 
   for t in range(1, 55):
     print(f"t:{t}")
     print("チェック8")
+    clk = clk + 1
     # if t == 55 or t == 56:
     #   continue
     if t % 3 == 1:
@@ -511,10 +371,12 @@ for o in range(0, 172, 19):
   print(blk3[c+m])
   print(blk4[c+m])
   print(blk5[c+m])
+  clk = clk + 1
 
   for t in range(1, 55):
     print(f"t:{t}")
     print("チェック10")
+    clk = clk + 1
     # if t == 55 or t == 56:
     #   continue
     if t % 3 == 1:
@@ -549,3 +411,6 @@ for o in range(0, 172, 19):
       print(blk4[c+m])
       print(blk5[c+m])
   n = n + 19
+print(f"clk:{clk}")
+
+print(blk0[0])
