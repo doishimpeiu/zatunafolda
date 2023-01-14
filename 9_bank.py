@@ -206,8 +206,8 @@ for m in range(18):
   write()
   # print("")
 
-print(blk0[0])
-input()
+# print(blk0[0])
+# input()
 # print(blk1)
 # print(blk2)
 # print(blk3)
@@ -236,28 +236,8 @@ for o in range(0, 362, 19):
   c = o
   print(f"c:{c}")
   print(f"o:{o}")
-  # o = o + 1
-  # print(f"c:{c}")
-  # print(f"o:{o}")
 
-  input()
-  # print("")
-  # t = 0もfor文の中に入れれるのではないか
-  t = 0
-  print(f"t:{t}") 
-  print("チェック5")
-  print(blk0[c])
-  print(blk1[c])
-  print(blk2[c])
-  print(blk3[c])
-  print(blk4[c])
-  print(blk5[c])
-  print(blk6[c])
-  print(blk7[c])
-  print(blk8[c])
-  clk = clk + 1
-
-  for t in range(1, 55):
+  for t in range(0, 55):
     print(f"t:{t}")
     print("チェック6")
     clk = clk + 1
@@ -283,8 +263,8 @@ for o in range(0, 362, 19):
       print(blk8[c+n])
       print(blk6[c+n+1])
       print(blk7[c+n+1])
-    if t % 3 == 0:
       c = c + 1
+    if t % 3 == 0:
       print(blk0[c+l])
       print(blk1[c+l])
       print(blk2[c+l])
@@ -306,18 +286,8 @@ for o in range(0, 362, 19):
   print("チェック7")
   print("3,4,5,6,7,8,0,1,2")
   print(f"c:{c}")
-  print(blk3[c+m])
-  print(blk4[c+m])
-  print(blk5[c+m])
-  print(blk6[c+n])
-  print(blk7[c+n])
-  print(blk8[c+n])
-  print(blk0[c+l])
-  print(blk1[c+l])
-  print(blk2[c+l])
-  clk = clk + 1
 
-  for t in range(1, 55):
+  for t in range(0, 55):
     print(f"t:{t}")
     print("チェック8")
     clk = clk + 1
@@ -343,8 +313,8 @@ for o in range(0, 362, 19):
       print(blk2[c+l])
       print(blk0[c+l+1])
       print(blk1[c+l+1])
-    if t % 3 == 0:
       c = c + 1
+    if t % 3 == 0:
       print(blk3[c+m])
       print(blk4[c+m])
       print(blk5[c+m])
@@ -362,18 +332,8 @@ for o in range(0, 362, 19):
   print("チェック9")
   print("6,7,8,0,1,2,3,4,5")
   print(f"c:{c}")
-  print(blk6[c+n])
-  print(blk7[c+n])
-  print(blk8[c+n])
-  print(blk0[c+l])
-  print(blk1[c+l])
-  print(blk2[c+l])
-  print(blk3[c+m])
-  print(blk4[c+m])
-  print(blk5[c+m])
-  clk = clk + 1
 
-  for t in range(1, 55):
+  for t in range(0, 55):
     print(f"t:{t}")
     print("チェック10")
     clk = clk + 1
@@ -399,8 +359,8 @@ for o in range(0, 362, 19):
       print(blk5[c+m])
       print(blk3[c+m+1])
       print(blk4[c+m+1])
-    if t % 3 == 0:
       c = c + 1
+    if t % 3 == 0:
       print(blk6[c+n])
       print(blk7[c+n])
       print(blk8[c+n])
@@ -412,5 +372,3 @@ for o in range(0, 362, 19):
       print(blk5[c+m])
   n = n + 19
 print(f"clk:{clk}")
-
-print(blk0[0])
