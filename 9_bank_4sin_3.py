@@ -230,27 +230,134 @@ X = 0
 y = 0
 Y = 0
 cnt = 0
-print(blk0)
-for y in range(3):
-  # if y % 3 == 2:
-  #   continue
-  # elif y % 3 == 1:  
-  #   continue
-  for X in range(19):
-    for x in range(3):
-      print(f"y:{y}")
-      print(f"x:{x}")
-      print(f"X:{X}")
-      print(f"cnt:{cnt}")
-      if x % 3 == 0:
-        print(blk0[X])
-      if x % 3 == 1:
-        print(blk1[X])
-      if x % 3 == 2:
-        print(blk2[X])
-      # if X == 18 and x % 3 == 2:
-      #   break
-      cnt = cnt + 1
+# print(f"blk0:{blk0}")
+# input()
+for Y in range(19):
+  for y in range(3):
+    if Y == 18 and y == 1:
+      break
+    for X in range(19):
+      print(f"Y={Y}")
+      print(f"y={y}")
+      print(f"X={X}")
+      for x in range(3):
+        print(f"x={x}")
+        if X == 18 and x == 1:
+          break
+        if x == 0 and y == 2:
+          print(blk6[X+(Y*19)])
+          print(blk7[X+(Y*19)])
+          print(blk8[X+(Y*19)])
 
-# print(blk1)
-# print(blk2)
+          print(blk0[X+(19*(y-1))+(Y*19)])
+          print(blk1[X+(19*(y-1))+(Y*19)])
+          print(blk2[X+(19*(y-1))+(Y*19)])
+
+          print(blk3[X+(19*(y-1))+(Y*19)])
+          print(blk4[X+(19*(y-1))+(Y*19)])
+          print(blk5[X+(19*(y-1))+(Y*19)])
+
+        if x == 1 and y == 2:
+          print(blk7[X+(Y*19)])
+          print(blk8[X+(Y*19)])
+          print(blk6[X+x+(Y*19)])
+
+          print(blk1[X+(19*(y-1))+(Y*19)])
+          print(blk2[X+(19*(y-1))+(Y*19)])
+          print(blk0[X+x+(19*(y-1))+(Y*19)])
+
+          print(blk4[X+(19*(y-1))+(Y*19)])
+          print(blk5[X+(19*(y-1))+(Y*19)])
+          print(blk3[X+x+(19*(y-1))+(Y*19)])
+
+        if x == 2 and y == 2:
+          print(blk8[X+(Y*19)])
+          print(blk6[X+x-1+(Y*19)])
+          print(blk7[X+x-1+(Y*19)])
+
+          print(blk2[X+(19*(y-1))+(Y*19)])
+          print(blk0[X+x-1+(19*(y-1))+(Y*19)])
+          print(blk1[X+x-1+(19*(y-1))+(Y*19)])
+
+          print(blk5[X+(19*(y-1))+(Y*19)])
+          print(blk3[X+x-1+(19*(y-1))+(Y*19)])
+          print(blk4[X+x-1+(19*(y-1))+(Y*19)])
+        
+        if x == 0 and y == 1:
+          print(blk3[X+(Y*19)])
+          print(blk4[X+(Y*19)])
+          print(blk5[X+(Y*19)])
+
+          print(blk6[X+(Y*19)])
+          print(blk7[X+(Y*19)])
+          print(blk8[X+(Y*19)])
+
+          print(blk0[X+(19*y)+(Y*19)])
+          print(blk1[X+(19*y)+(Y*19)])
+          print(blk2[X+(19*y)+(Y*19)])
+        
+        if x == 1 and y == 1:
+          print(blk4[X+(Y*19)])
+          print(blk5[X+(Y*19)])
+          print(blk3[X+x+(Y*19)])
+
+          print(blk7[X+(Y*19)])
+          print(blk8[X+(Y*19)])
+          print(blk6[X+x+(Y*19)])
+
+          print(blk1[X+(19*y)+(Y*19)])
+          print(blk2[X+(19*y)+(Y*19)])
+          print(blk0[X+x+(19*y)+(Y*19)])
+
+        if x == 2 and y == 1:
+          print(blk5[X+(Y*19)])
+          print(blk3[X+x-1+(Y*19)])
+          print(blk4[X+x-1+(Y*19)])
+
+          print(blk8[X+(Y*19)])
+          print(blk6[X+x-1+(Y*19)])
+          print(blk7[X+x-1+(Y*19)])
+
+          print(blk2[X+(19*y)+(Y*19)])
+          print(blk0[X+x-1+(19*y)+(Y*19)])
+          print(blk1[X+x-1+(19*y)+(Y*19)])
+
+        if x == 0 and y == 0:
+          print(blk0[X+(19*y)+(Y*19)])
+          print(blk1[X+(19*y)+(Y*19)])
+          print(blk2[X+(19*y)+(Y*19)])
+
+          print(blk3[X+(Y*19)])
+          print(blk4[X+(Y*19)])
+          print(blk5[X+(Y*19)])
+
+          print(blk6[X+(Y*19)])
+          print(blk7[X+(Y*19)])
+          print(blk8[X+(Y*19)])
+
+        if x == 1 and y == 0:
+          print(blk1[X+(19*y)+(Y*19)])
+          print(blk2[X+(19*y)+(Y*19)])
+          print(blk0[X+x+(19*y)+(Y*19)])
+
+          print(blk4[X+(Y*19)])
+          print(blk5[X+(Y*19)])
+          print(blk3[X+x+(Y*19)])
+
+          print(blk7[X+(Y*19)])
+          print(blk8[X+(Y*19)])
+          print(blk6[X+x+(Y*19)])
+
+        if x == 2 and y == 0:
+          print(blk2[X+(19*y)+(Y*19)])
+          print(blk0[X+x-1+(19*y)+(Y*19)])
+          print(blk1[X+x-1+(19*y)+(Y*19)])
+
+          print(blk5[X+(Y*19)])
+          print(blk3[X+x-1+(Y*19)])
+          print(blk4[X+x-1+(Y*19)])
+
+          print(blk8[X+(Y*19)])
+          print(blk6[X+x-1+(Y*19)])
+          print(blk7[X+x-1+(Y*19)])
+print("終了")

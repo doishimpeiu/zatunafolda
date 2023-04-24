@@ -234,7 +234,7 @@ for Y in range(0, 362, 19):
   m = 0 #3,4,5
   n = 0 #6,7,8
   for y in range(3):
-    input()
+    # input()
     c = Y
     for t in range(0, 55):
       print(f"t:{t}")
