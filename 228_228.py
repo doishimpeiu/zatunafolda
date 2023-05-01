@@ -1,14 +1,3 @@
-from openpyxl import Workbook
-wb = Workbook()
-ws = wb.active
-
-l = []
-r = []
-num = 0
-for b in range(228):
-  for a in range(228):
-    ws.cell(b + 1, a + 1, value=num)
-    num = num + 1
-
-
-wb.save('228_228_lr.xlsx')
+version https://git-lfs.github.com/spec/v1
+oid sha256:2367fc6d8cdfb92d7824f207427def0e659146a74a848185e6e2e8758af10483
+size 211
